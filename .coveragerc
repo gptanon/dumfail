@@ -1,9 +1,9 @@
 [run]
-source = dumfail
+source = wavespin
 parallel = True
 omit =
-    dumfail/utils/_examples_utils.py
-    dumfail/utils/_compiled/setup.py
+    wavespin/utils/_examples_utils.py
+    wavespin/utils/_compiled/setup.py
 
 [report]
 show_missing = True

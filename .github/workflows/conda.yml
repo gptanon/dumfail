@@ -1,11 +1,11 @@
-name: DumFail CI
+name: WaveSpin CI
 
 on:
     workflow_dispatch:
 
     push:
         paths:
-          - "dumfail/*"
+          - "wavespin/*"
           - "tests/*"
           - ".github/workflows/*"
           - ".coveragerc"
@@ -14,7 +14,7 @@ on:
           
     pull_request:
         paths:
-          - "dumfail/*"
+          - "wavespin/*"
           - "tests/*"
           - ".github/workflows/*"
           - ".coveragerc"
@@ -60,16 +60,16 @@ jobs:
                   conda run -n ${CONDA_ENV} python3 -m pip install scikit-learn
                   conda run -n ${CONDA_ENV} python3 -m pip install -r requirements-dev.txt
 
-            - name: Set up DumFail
+            - name: Set up WaveSpin
               run: conda run -n ${CONDA_ENV} python3 -m pip install -e .        
               
             - name: Test
               run: >
                   conda run -n ${CONDA_ENV} pycodestyle --max-line-length=85 
                   --ignore=E111,E114,E129,E201,E202,E203,E221,E225,E226,E241,E266,E272,E302,E402,W503,W504,W605,E702,E722,E731,E741
-                  dumfail
+                  wavespin
                   
-                  conda run -n ${CONDA_ENV} pytest --cov=dumfail --cov-report=xml
+                  conda run -n ${CONDA_ENV} pytest --cov=wavespin --cov-report=xml
 
             - name: codecov upload coverage
               uses: codecov/codecov-action@v1  
