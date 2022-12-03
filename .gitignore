@@ -8,7 +8,7 @@ docs/source/examples-rendered
 docs/source/gen_modules
 docs/source/silent_image_includes.txt
 
-# Custom compiled a
+# Custom compiled
 wavespin/utils/_compiled/*.html
 wavespin/utils/_compiled/*.pyd
 wavespin/utils/_compiled/*.c

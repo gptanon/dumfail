@@ -2,7 +2,16 @@ setuptools>=41.0.0
 twine>=1.15.0
 coverage
 coveralls
+kaleido
+pillow
 pytest
 pytest-cov
 pycode
 pycodestyle
+plotly
+tensorflow>=2.10.0
+#
+# below are commented so CI installs via conda rather
+# than pip, but not removed entirely for users' knowledge
+#matplotlib>=3.6.0
+#torch>=1.10.0
