@@ -3,17 +3,17 @@
 # Copyright (c) 2022- John Muradeli
 #
 # Distributed under the terms of the MIT License
-# (see dumfail/__init__.py for details)
+# (see wavespin/__init__.py for details)
 # -----------------------------------------------------------------------------
 
 """
-dumfail
+WaveSpin
 ========
 
 Joint Time-Frequency Scattering, Wavelet Scattering: features for audio,
 biomedical, and other applications, in Python
 
-dumfail features scattering transform implementations that maximize accuracy,
+WaveSpin features scattering transform implementations that maximize accuracy,
 flexibility, and speed. Included are visualizations and convenience utilities
 for transform and coefficient introspection and debugging.
 """
@@ -46,15 +46,15 @@ def find_version(*file_paths):
     raise RuntimeError('Unable to find version')
 
 # Cython extensions
-ext_modules = cythonize(Extension("dumfail.utils._compiled._algos",
-                                  ["dumfail/utils/_compiled/_algos.pyx"]),
+ext_modules = cythonize(Extension("wavespin.utils._compiled._algos",
+                                  ["wavespin/utils/_compiled/_algos.pyx"]),
                         language_level=3)
 
 setup(
-    name="dumfail",
-    version=find_version('dumfail', '__init__.py'),
+    name="WaveSpin",
+    version=find_version('wavespin', '__init__.py'),
     packages=find_packages(exclude=['tests', 'examples']),
-    url="https://github.com/OverLordGoldDragon/dumfail",
+    url="https://github.com/OverLordGoldDragon/wavespin",
     license="MIT",
     author="John Muradeli",
     author_email="john.muradeli@gmail.com",
